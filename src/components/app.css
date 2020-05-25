@@ -1,0 +1,14 @@
+body {
+  background-color: #333;
+  color: aliceblue !important;
+}
+
+.search-bar {
+  background-color: #444;
+  color: aliceblue;
+}
+
+img {
+  width: 15%;
+  height: 10%;
+}
