@@ -8,7 +8,17 @@ body {
   color: aliceblue;
 }
 
-img {
-  width: 15%;
-  height: 10%;
+.video-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  cursor: pointer;
+}
+
+.video-item img {
+  max-width: 150px !important;
+  border-radius: 5%;
+}
+
+.video-item h3 {
+  color: #fff !important;
 }

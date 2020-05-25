@@ -7,7 +7,7 @@ const VideoList = ({ videos }) => {
     return <VideoItem key={video.etag} video={video} />;
   });
 
-  return <div className="ui relaxed divided list">{renderdList}</div>;
+  return <div className="ui animated relaxed divided list">{renderdList}</div>;
 };
 
 export default VideoList;
