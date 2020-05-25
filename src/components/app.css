@@ -1,6 +1,5 @@
 body {
   background-color: #333;
-  color: aliceblue !important;
 }
 
 .search-bar {
@@ -9,9 +8,10 @@ body {
 }
 
 .video-item {
-  display: inline-flex !important;
+  display: flex !important;
   align-items: center !important;
   cursor: pointer;
+  color: aliceblue !important;
 }
 
 .video-item img {
@@ -21,4 +21,13 @@ body {
 
 .video-item h3 {
   color: #fff !important;
+}
+
+.video-item ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.video-item ::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }
