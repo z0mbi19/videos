@@ -2,7 +2,11 @@ import React from "react";
 
 const VideoDetail = ({ video }) => {
   if (!video) {
-    return <div></div>;
+    return (
+      <div className="video-item">
+        Pesquise por algum video aqui <span role="img">☝</span>
+      </div>
+    );
   }
 
   return (

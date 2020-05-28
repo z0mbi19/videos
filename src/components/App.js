@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 
 import "./app.css";
 import SearchBar from "./SearchBar";
@@ -17,7 +16,7 @@ class App extends React.Component {
       params: {
         part: "snippet",
         type: "video",
-        maxResults: 50,
+        maxResults: 5,
         key: `${KEY}`,
         q: term,
       },
@@ -33,22 +32,23 @@ class App extends React.Component {
 
   render() {
     return (
-      <Container className="ui container ">
-        <Row>
-          <SearchBar onFormSubmit={this.onTermSubmit} />
-        </Row>
-        <Row>
-          <Col md="auto">
-            <VideoDetail video={this.state.selectedVideo} />
-          </Col>
-          <Col md="auto">
-            <VideoList
-              onVideoSelect={this.onVideoSelect}
-              videos={this.state.videos}
-            />
-          </Col>
-        </Row>
-      </Container>
+      <div className="ui container ">
+        <SearchBar onFormSubmit={this.onTermSubmit} />
+
+        <div className="ui grid">
+          <div className="ui row">
+            <div className="eleven wide column">
+              <VideoDetail video={this.state.selectedVideo} />
+            </div>
+            <div className="five wide column">
+              <VideoList
+                onVideoSelect={this.onVideoSelect}
+                videos={this.state.videos}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }
